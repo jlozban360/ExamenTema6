@@ -6,7 +6,8 @@ import java.io.IOException;
 
 public class P1CalculaLluvia {
 
-    public static void main(String[] args) {
+    public static void main( String[ ] args )
+    {
         int minLluvia = 0;
         int totalLluvia = 0;
 
@@ -20,19 +21,19 @@ public class P1CalculaLluvia {
             while( ( line = br.readLine( ) ) != null && !line.equals( "-1" ) )
             {
                 String[ ] parts = line.split(" " );
-                String month = parts[ 0 ];
+                String mes = parts[ 0 ];
 
                 int sum = 0;
 
                 for( int i = 1; i < parts.length; i++ )
                 {
-                    int rainfall = Integer.parseInt(parts[i]);
-                   sum += rainfall;
+                    int lluvia = Integer.parseInt(parts[i]);
+                    sum += lluvia;
                 }
 
                 if( sum >= minLluvia )
                 {
-                    bw.write(month + " " + sum );
+                    bw.write(mes + " " + sum );
                     bw.newLine( );
                     totalLluvia += sum;
                 }
